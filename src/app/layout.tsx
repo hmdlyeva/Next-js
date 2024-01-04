@@ -1,4 +1,8 @@
+
+
 import { Metadata } from "next";
+import StoreProvider from "./StoreProvider";
+
 
 export const metadata: Metadata = {
   title: {
@@ -19,7 +23,7 @@ export default function RootLayout({
         <header style={{ backgroundColor: "gray" }}>
           <p>this is header</p>
         </header>
-        {children}
+        <StoreProvider>{children}</StoreProvider>
         <footer style={{ backgroundColor: "gray" }}>
           <p>this is footer</p>
         </footer>
